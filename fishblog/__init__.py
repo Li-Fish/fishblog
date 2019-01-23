@@ -10,9 +10,10 @@ from flask_sqlalchemy import SQLAlchemy
 from fishblog.blueprints.admin import admin_bp
 from fishblog.blueprints.auth import auth_bp
 from fishblog.blueprints.blog import blog_bp
+from fishblog.settings import config
 
 app = Flask('fishblog')
-app.config.from_pyfile('settings.py')
+app.config.from_object(config['development'])
 
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
