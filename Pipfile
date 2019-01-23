@@ -11,6 +11,7 @@ flask-mail = "*"
 flask-moment = "*"
 flask-sqlalchemy = "*"
 flask-ckeditor = "*"
+flask-wtf = "*"
 
 [dev-packages]
 

@@ -1,0 +1,2 @@
+FLASK_APP=fishblog
+FLASK_ENV=development

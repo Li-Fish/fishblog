@@ -20,8 +20,8 @@ ckeditor = CKEditor(app)
 mail = Mail(app)
 moment = Moment(app)
 
-app.register_blueprint(admin_bp)
-app.register_blueprint(auth_bp)
+app.register_blueprint(admin_bp, url_prefix='admin')
+app.register_blueprint(auth_bp, url_prefix='/auth')
 app.register_blueprint(blog_bp)
 
 
@@ -46,7 +46,7 @@ def internal_server_error(e):
 
 
 @app.cli.command()
-@click.option('--drop', it_flag=True, help='Create after drop.')
+@click.option('--drop', is_flag=True, help='Create after drop.')
 def initdb(drop):
     if drop:
         click.confirm('This operation will delete the database, do you want to continue?', abort=True)
