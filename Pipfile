@@ -12,6 +12,7 @@ flask-moment = "*"
 flask-sqlalchemy = "*"
 flask-ckeditor = "*"
 flask-wtf = "*"
+faker = "*"
 
 [dev-packages]
 
